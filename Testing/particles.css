@@ -1,0 +1,40 @@
+#box1{
+	background-color: red;
+}
+#box2{
+	background-color: green;
+}
+#box3{
+	/*background-color: blue;*/
+}
+
+#box1, #box2, #box3, #particles-js {
+	height: 200px;
+	/*width: 50%;*/
+	margin: auto;
+	margin-bottom: 20px;
+	border-radius: 18px;
+}
+
+#particles-js{
+	background-color: black;
+	position: absolute;
+	/*margin: auto;*/
+	/*z-index: 1;*/
+}
+
+#innercontainer{
+	/*z-index: -1;*/
+	color: white;
+	position: relative;
+	padding-left: 3%;
+	padding-top: 0.001%;
+	background-color: transparent;
+}
+
+#particles-js, #innercontainer{
+	/*width: 50%;*/
+	/*margin-left: 25%;*/
+	/*margin-right: 25%;*/
+	/*margin: auto;*/
+}

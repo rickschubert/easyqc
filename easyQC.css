@@ -1,0 +1,31 @@
+body { 
+	margin: auto;
+	width: 30%;
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 250%;
+	color: #8f3d4c;
+	text-shadow: 1px 1px grey;
+}
+
+h2 {
+	margin-bottom: -2%;
+	font-size: 150%;
+/*	color: #664d00;*/
+}
+
+a:link {
+	color: #cc0000;
+}
+
+a:visited {
+	color: #990000;
+}
+
+a:hover {
+	color: #ff3333;
+}

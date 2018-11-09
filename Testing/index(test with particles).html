@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>easyQC – because QC just got easy!</title>
+	<link href="bootstrap-easyqc.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="particles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body lang="en">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="easyqc_index.html">easyQC</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container theme-showcase" role="main">
+		<div class="jumbotron theme-showcase" id="mainjumbo">
+			<div>
+				<div id="particles-js"></div>
+			</div>
+			<div>
+				<h1>easyQC</h1>
+				<p>This website will present you all the available scripts to ease up QC. easyQC!</p>
+				<p>
+					<a class="btn btn-success" href="about.html" role="button">Learn more »</a>
+				</p>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<div class="col-md-3 col-xs-6">
+				<h2>Quality Model</h2>
+				    <a class="thumbnail">
+				    	<img src="img/qualitymodel.ico" class="gridicon img-fluid">
+				    </a>
+				<p>Provide linguistic feedback in SDL Trados Studio using a unified comment tool.</p>
+				<p>
+					<a class="btn btn-default" href="quality_model.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Subtitle Converter</h2>
+					<a class="thumbnail">
+				    	<img src="img/subtitle.png" class="gridicon img-fluid">
+					</a>
+				<p>Convert film scripts from Excel format into well-formed into well formed text files so that you can create Subtitles in <a href="http://www.nikse.dk/subtitleedit/">Subtitle Edit</a>.</p>
+				<p>
+					<a class="btn btn-default" href="subtitle_converter.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Excel Combiner</h2>
+					<a class="thumbnail">
+				    	<img src="img/Furtiffes-lunettes-bleues.ico" class="gridicon img-fluid">
+					</a>
+				<p>Combine several Excel files all into one big master workbook to perform global searches easily.</p>
+				<p>
+					<a class="btn btn-default" href="excel_combiner.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Excel Splitter</h2>
+						<a class="thumbnail">
+							<img src="img/banana.ico" class="gridicon img-fluid">
+						</a>
+				<p>Split up any Excel workbook with multiple worksheets into seperate files for each sheet.</p>
+				<p>
+					<a class="btn btn-default" href="excelsplitter.html" role="button">More »</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-6">
+				<h2>Trados Tab Jumper</h2>
+					<a class="thumbnail">
+				    	<img src="img/kangoroo.ico" class="gridicon img-fluid">
+					</a>
+				<p>Quickly jump between several Trados tabs and also apply the most recent filter.</p>
+				<p>
+					<a class="btn btn-default" href="trados_jumper.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Script Preparer (AutoHighlight)</h2>
+					<a class="thumbnail">
+				    	<img src="img/bear.ico" class="gridicon img-fluid">
+					</a>
+				<p>Auto-prepares Film Scripts (Excel) for the AutoHighlight PDF tool (Final QC)</p>
+				<p>
+					<a class="btn btn-default" href="scriptpreparer.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>RegEx</h2>
+				<a class="thumbnail">
+					<img src="img/regex.png" class="gridicon img-fluid">
+				</a>
+				<p>Master regular expressions to power up your Trados search queries.</p>
+				<p>
+					<a class="btn btn-default" href="regex.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Look Up Text</h2>
+					<a class="thumbnail">
+							<img src="img/lion.ico" class="gridicon img-fluid">
+					</a>
+				<p>Look up any highlighted text in Trados or the most recently opened PDF file.</p>
+				<p>
+					<a class="btn btn-default" href="lookup.html" role="button">More »</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-6">
+				<h2>AutoHighlight</h2>
+					<a class="thumbnail">
+						<img src="img/chili.ico" class="gridicon img-fluid">
+					</a>
+				<p>Highlight a selected list of terms across multilple PDFs in order to quickly identify key terms and compare translation and source to each other.</p>
+				<p>
+					<a class="btn btn-default" href="autohighlight.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Caption Comparer</h2>
+					<a class="thumbnail">
+						<img src="img/pumpkin.ico" class="gridicon img-fluid">
+					</a>
+				<p>Quickly scroll through two sets of PDFs (source and translation) to compare large amounts of files in hyperspeed.</p>
+				<p>
+					<a class="btn btn-default" href="caption.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>PDF Page Jumper</h2>
+					<a class="thumbnail">
+						<img src="img/head.ico" class="gridicon img-fluid">
+					</a>
+				<p>Jump to the next page in all PDF windows – instantly, in 1 click!</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Flash Page Jumper</h2>
+					<a class="thumbnail">
+						<img src="img/robot.ico" class="gridicon img-fluid">
+					</a>
+				<p>Scroll through source and translation flash files as well as through the translated PDF, all in the same time!</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">More »</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-6">
+				<h2>VO Preparer</h2>
+					<a class="thumbnail">
+							<img src="img/candy.ico" class="gridicon img-fluid">
+					</a>
+				<p>Quickly copy excel content into a word file and from a word file back into Excel.</p>
+				<p>
+					<a class="btn btn-default" href="vopreparer.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Length Counter</h2>
+					<a class="thumbnail">
+							<img src="img/count.ico" class="gridicon img-fluid">
+					</a>
+				<p>Count the character length of a text, either with or without spaces.</p>
+				<p>
+					<a class="btn btn-default" href="lengthcounter.html" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Veritas Template Copier</h2>
+					<a class="thumbnail">
+							<img src="img/grumpy.ico" class="gridicon img-fluid">
+					</a>
+				<p>Turn film scripts from excel into word format and automatically filter out captions.</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Clipboard Cleaner</h2>
+				<p>Copy over content from PDFs or other file types without any line breaks or double spaces.</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">More »</a>
+				</p>
+			</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-6">
+				<h2>Quick Lookup</h2>
+				<p>Quickly any content to search for it immediately in opened PDF or Trados windows.</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">More »</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<h2>Subtitle Doctor</h2>
+				<p>Quickly move words and even entire lines around in film scripts (Excel) to ensure <em>that</em> perfect layout.</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">More »</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="particles.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

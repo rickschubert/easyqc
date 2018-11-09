@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>easyQC – because QC just got easy!</title>
+  <link href="bootstrap-easyqc.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body lang="en">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="easyqc_index.html">easyQC</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+        <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<div class="container theme-showcase" role="main">
+  <div class="page-header">
+    <h1><img src="img/regex.png" class="titleimage img-fluid">RegEx for SDL Trados Studio 2014<small></small></h1>
+  </div>
+  <p>Trados uses “RegEx” in the filter box. With these “regular expressions” you can search for various alternatives at once. This is especially useful in languages with cases where a term can appear in different spellings (for example the German word for “mouse”: <b>Maus</b>, <b>Mäuse</b>, <b>Mäusen</b>) or if you want to search something in the English but you know that there might be another word in between sometimes. </p>
+  <p>Let’s take as example the German translation for “Global Network”: <b>Globales Netzwerk</b>, <b>globale Netzwerk</b>, <b>globalen Netzwerk</b> are all perfectly fine expressions in a running sentence. Searching all of them one by one would be annoying, but RegEx makes it easy!</p>
+  <table class="table table-hover">
+    <tr>
+      <td><b>What we want to find:</b></td>
+      <td>Globales Netzwerk</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>globale Netzwerk</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>globalen Netzwerk</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>globale erfolgreiche Netzwerk</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>globalen starken Netzwerk</td>
+    </tr>
+    <tr>
+      <td><b>How we can find all of them:</b></td>
+      <td>Globale<kbd>(.*)</kbd>Netzwerk</td>
+    </tr>
+  </table>
+  <p><kbd>(.*)</kbd> can stand for <u>anything</u>. This even means nothing. Thus, <b>Globale<kbd>(.*)</kbd>Netzwerk</b> would also return it without a space: <b>GlobaleNetzwerk</b>.</p>
+  <p>When you are sure that there should be <u>something</u> in between, it would be best to use <kbd>(.+)</kbd>. Please see in the table below how to find <b>Network</b> with several regular expressions.</p>
+  <table class="table table-hover">
+    <tr>
+      <td><kbd>(.+)</kbd></td>
+      <td>At least 1 character or more</td>
+      <td>N<kbd>(.+)</kbd>ork</td>
+    </tr>
+    <tr>
+      <td><kbd>(.)</kbd></td>
+      <td>Exactly 1 single character</td>
+      <td>N<kbd>(.)</kbd>twork</td>
+    </tr>
+    <tr>
+      <td><kbd>(..)</kbd></td>
+      <td>Exactly 2 single characters</td>
+      <td>N<kbd>(..)</kbd>work</td>
+    </tr>
+    <tr>
+      <td><kbd>(.*)</kbd></td>
+      <td>Anything, even nothing</td>
+      <td>N<kbd>(.*)</kbd>ork</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Net<kbd>(.*)</kbd>work</td>
+    </tr>
+    <tr>
+      <td><kbd>[0-9]</kbd></td>
+      <td>A single digit number from 0 to 9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><kbd>[3-6]</kbd></td>
+      <td>A single digit number from 3 to 6</td>
+      <td>Finds: 3, 4, 5, 6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Excludes: 0, 1, 2, 7, 8, 9</td>
+    </tr>
+  </table>
+  <p>If you want to search something with special characters, you often have to “escape” them with a backslash <kbd>\</kbd>. So for example when you are searching for anything in between brackets, as in the example below.</p>
+  <table class="table table-hover">
+    <tr>
+      <td><b>What we want to find:</b></td>
+      <td>(Accepted)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(Rejected)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(Delivered)</td>
+    </tr>
+    <tr>
+      <td><b>How we can find all of them:</b></td>
+      <td> <kbd>\((.*)\(</kbd></td>
+    </tr>
+  </table>
+  <h1>Real Life Example<!-- <small>  Network Checkpoint & Remark Compliance</small> --></h1>
+  <img src="img/networkcheckpoints.jpg" class="img-responsive body-image" style="max-height:300px;">
+  <p>There was an issue with a project, see the screenshot above: The entire module was full of time codes and we wanted to revert back to English on all of them. Here’s how we managed to filter for all of them and only them in Trados: <kbd>[0-9](.*):[0-6][0-9]</kbd></p>
+  <p><b class="gelbmark">[0-9]</b><b class="gruenmark">(.*)</b><b class="pinkmark">:</b><b class="tealmark">[0-6]</b><b class="gelbmark">[0-9]</b> filters for: <span class="gelbmark">Any number from 0-9</span>, <span class="gruenmark">followed by absolutely anything</span>, <span class="pinkmark">followed by a colon (:)</span>, <span class="tealmark">followed by any number between 0 and 6</span>, <span class="gelbmark">followed by any number between 0 and 9</span>.</p>
+  <p>The second to last search entry ranges only from <span class="tealmark">0 to 6</span> because there are only 60 minutes on the clock and not 70, 80 etc.</p>
+</div>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+
+</body>
+</html>

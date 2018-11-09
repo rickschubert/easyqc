@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>easyQC – because QC just got easy!</title>
+  <link href="bootstrap-easyqc.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body lang="en">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="easyqc_index.html">easyQC</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+        <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<div class="container theme-showcase" role="main">
+  <div class="page-header">
+    <h1><img src="img/chili.ico" class="titleimage img-fluid">AutoHighlight PDFs<small></small></h1>
+  </div>
+  <div class="panel-group">
+    <div class="panel panel-danger" id="copyrightpanel">
+      <div class="panel-heading"><p>Find and Mark Batch Processing (Actions) script by Thom Parker, WindJack Solutions, Inc. October 2010<br>www.windjack.com, www.pdfscripting.com<br>For Adobe Systems Inc., <a href="http://www.adobe.com">www.adobe.com</a></p></div>
+      <div class="panel-body">
+        <p>This script has been done by Thom Parker. The following document is merely a guideline on how to use Parker's phenomenal work.</p>
+        <p>My only work regarding this is the script to ease up compiling glossaries.</p>
+      </div>
+    </div>
+  <h3>Installing the script</h3>
+  <ol>
+    <li>Get the “AutoHighlight.sequ” from the QA Team references folder</li>
+    <li>Double click it – it should now be part of your Acrobat Reader</li>
+  </ol>
+  <h3>Setting up the script to mark up files</h3>
+  <ol>
+    <li>Create a text file (Unicode) of the text entries you want to highlight
+      <ul>
+        <li>Create an excel list with terms – to make it easier, we have a set of AutoHotkeys available (see AutoHotkeys to compile glossaries)</li>
+        <li>Save the excel list with Unicode: “File → Save As → Unicode Text”</li>
+        <ul>
+          <li><b>Important</b>: Create a list like this for each language you want to highlight – thus, only have the English in the excel file first and save it as Unicode and then only the Translation terms which you save as Unicode</li>
+        </ul>
+      </ul>
+    </li>
+    <li>In the top right “Tools | Sign | Comment”: click “Tool”
+      <ul>
+        <li>Locate “Action Wizard”</li>
+        <li>Right click on “AutoHighlight” → “Edit Action”</li>
+      </ul>
+    </li>
+    <li>In the right window, click “Search & Remove Text”
+      <ul>
+        <li>Click “Specify Settings”</li>
+        <li>Click “Import” and locate the text files of files you want to highlight</li>
+        <li>o	Click “Okay”</li>
+      </ul>
+    </li>
+    <li>Click “Save” and again “Save”</li>
+  </ol>
+  <h3>Notes before running the script</h3>
+  <ul>
+    <li>Please copy the files to mark up on your PC as the script is set up that way that the PDF files will be automatically saved with the mark-ups</li>
+    <li>The dialogue with the folder to locate with files to mark up does not allow copying in links: We suggest having the files in a folder on your desktop so that you will find them easily</li>
+  </ul>
+  <h3>Running the script</h3>
+  <ol>
+    <li>Select “Tools” and click then on “AutoHighlight”
+      <ul>
+        <li>Tip: If you right click on “AutoHighlight” and select “Add to Quick Tools Toolbar”, you will have the script always ready at the top bar</li>
+      </ul>
+    </li>
+    <li>Click “Add folder”
+      <ul>
+        <li>Add the folder with files you want to mark up</li>
+        <li>Click “Start”</li>
+      </ul>
+    </li>
+  </ol>
+  <h3>Remarks</h3>
+  <ul>
+    <li>This has been tested on Adobe Acrobat XI Pro – if it is not working due to another version, just let us know, we are sure that it also works with other versions of Adobe PDF (at least with Acrobat X and higher), there might only be a slight change in how to install it</li>
+    <li>This tool uses the PDF search function: Thus, if a word appears in another word, the whole word will highlighted
+      <ul>
+        <li><u>Example</u></li>
+        <li>The glossary file has <code>ir</code></li>
+        <li>The PDF has the word <code>Irokese</code></li>
+        <li>↷ the whole word <code>Irokese</code> will be marked up</li>
+        <li>Due to that, it might be better to avoid looking for such small words as the number of false hits might get very high</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>Compiling glossaries <small>AutoHotkey Script</small></h3>
+  <ul>
+    <li>The scripts can be found in the QA Team folder (the one with the chili)</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> - Copy any highlighted text into the most recent excel file
+      <ul>
+        <li>The text will be copied into the excel file, the cursor will jump one cell below and the window which has been active before will be activated again</li>
+      </ul>
+    </li>
+    <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> - As the previous feature, but in zigzag mode jumping between two excel columns</li>
+    <li><kbd>Pause</kbd> - Reset the zigzag mode (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd>) to the left column</li>
+    <li><kbd>ScrollLock</kbd> - Toggle the Clipboard Cleaner on/off
+      <ul>
+        <li>The clipboard cleaner automatically removes all formatting as well as returns and double spaces from selected text. This mode is by standard turned on, can be turned off though should the language make it necessary (i.e. languages without word spaces).</li>
+      </ul>
+    </li>
+    <li><kbd>Alt</kbd> + <kbd>A</kbd> - Amend hard returns
+      <ul>
+        <li>Position the cursor on the end of a line; the next line will be brought up and a space inserted</li>
+      </ul>
+    </li>
+    <li><kbd>Numpad3</kbd> & <kbd>H</kbd> - Delete checkpoints/the last word from cells in an excel file</li>
+    <li><kbd>Numpad3</kbd> & <kbd>Y</kbd> - Delete first word/checkpoint from excel cells (i.e.<code>EXW - Ex-Works</code>)</li>
+  </ul>
+
+
+</div>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+
+</body>
+</html>

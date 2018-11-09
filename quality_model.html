@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>easyQC – because QC just got easy!</title>
+  <link href="bootstrap-easyqc.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body lang="en">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="easyqc_index.html">easyQC</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+        <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<div class="container theme-showcase" role="main">
+  <div class="page-header">
+    <h1><img src="img/qualitymodel.ico" class="titleimage img-fluid">Quality Model<small></small></h1>
+  </div>
+  <div class="panel-group">
+    <div class="panel panel-success" id="copyrightpanel">
+      <div class="panel-heading"><p>© Rick Schubert<br><a href="mailto:rickschubert@gmx.de">rickschubert@gmx.de</a></p></div>
+      <div class="panel-body">
+        <p>Created with AutoHotkey. Big thanks to the AutoHotkey community, especially to the users "just me", "Fee" and "Helgef".</p>
+        <p>Please do not share without permission.</p>
+      </div>
+    </div>
+  <h3>Introduction</h3>
+    <p>This tool is meant as a quick way to provide linguistic feedback regarding changes made to translations in the tool SDL Trados Studio. The feedback will simply just be written as a comment to the specific segment, all automated in a consistent approach which helps analysing the problem fields later on.</p>
+  <h3>Logging errors</h3>
+    <p>Simply press <kbd>-</kbd> on your numpad to open the quality metric:</p>
+    <img src="img/qmscreen.jpg" class="img-responsive body-image"></img>
+    <p>Just click on the error category (you can also use a keyboard shortcut) and it will automatically be logged in the comment section. If necessary, you can also enter additional information regarding the mistake which will be logged as well.</p>
+    <p><bold>NOTE:</bold> <u>Don’t</u> use line breaks in your additional comment. (This might be implemented in a future version.)</p>
+    <h4>Keyboard shortcuts</h4>
+    <p>Hold <kbd>-</kbd> on the Numpad and the corresponding category number to quick-assign an error.</p>
+    <p><u>Example:</u></p>
+    <p><kbd>-</kbd> + <kbd>Numpad1</kbd> = 1. Mistranslation</p>
+    <p><kbd>-</kbd> + <kbd>1</kbd> <i>(above the letters)</i> = 1. Mistranslation</p>
+    <p>If the quality metric is already open, you can press <kbd>Ctrl</kbd> together with the corresponding category number on your numpad to quick-assign an error.</p>
+    <p><u>Example:</u></p>
+    <p><kbd>Ctrl</kbd> + <kbd>Numpad2</kbd> = 2. Terminology</p>
+  <h3>Comment Exporter</h3>
+    <p>This allows you to export all of your comments made into an excel table. This feature can be accessed from the tray menu (right click).</p>
+    <ol>
+        <li>Locate the sdlxliff files you want to create a list out of (you can select several)
+          <ul><li>You will find them usually in the folder <i>My Documents\Studio 2014\[Your project name]\[your language code]</i></li></ul>
+        </li>
+        <li>Select where you want to save the exported list</li>
+        <li>The list will automatically open</li>
+    </ol>
+  <h3>“Oh no, it does not work!”</h3>
+    <p>I tested this script with a fast Windows 7 PC together with sdlxliff files from SDL Studio 2014 and 2015. Please always remember that the actual process of putting in comments is still just a fast automatisation. It might be possible that different PCs are slower than others and would need minor adjustments of the script so that it “waits” longer. In case something should not work, please write me at <a href="mailto:rick.schubert@wlt.com">rick.schubert@wlt.com</a></p>
+  <h3>Known issues</h3>
+    <ul>
+      <li>If a segment is completely deleted, the table created via the Comment Exporter will simply display the segment how it has been before the change made. This can be avoided by replacing completely deleted segments with an empty blank. (Alternatively, you can make a note for yourself to amend this in the excel file later on.)</li>
+      <li>Line breaks cannot be used into the “additional information” box when logging a mistake. This might be implemented in a future version. </li>
+      <li>Please do not change the standard SDL Studio hotkey to insert a comment (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>) as otherwise the comment logging would not work anymore.</li>
+    </ul>
+
+</div>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+
+</body>
+</html>
